@@ -18,7 +18,7 @@ FROM divio/base:4.16-py3.6-slim-stretch
 # ENV PIP_INDEX_URL=${PIP_INDEX_URL:-https://wheels.aldryn.net/v1/aldryn-extras+pypi/${WHEELS_PLATFORM:-aldryn-baseproject-py3}/+simple/} \
 #     WHEELSPROXY_URL=${WHEELSPROXY_URL:-https://wheels.aldryn.net/v1/aldryn-extras+pypi/${WHEELS_PLATFORM:-aldryn-baseproject-py3}/}
 
-RUN pip install - requirements.in
+RUN pip install -r requirements.in
 
 COPY requirements.* /app/
 COPY addons-dev /app/addons-dev/
